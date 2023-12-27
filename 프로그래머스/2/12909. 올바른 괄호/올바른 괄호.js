@@ -1,13 +1,10 @@
 function solution(s){
-    const stack = []
-    s.split('').map(string=>{
-        if(string === ')' && stack[stack.length-1] === '('){
-            stack.pop()
+    let cum = 0
+    for (let paren of s) {
+        cum += paren === '('? 1: -1
+        if(cum < 0) {
+            return false
         }
-        else{
-            stack.push(string)
-        }
-    })
-
-    return stack.length === 0
+    }
+    return cum === 0? true: false;
 }
