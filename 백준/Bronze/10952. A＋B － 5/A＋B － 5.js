@@ -1,4 +1,3 @@
-const input = require("fs").readFileSync("/dev/stdin", "utf8").split("\n")
-for(let a of input){
+for(let a of require("fs").readFileSync("/dev/stdin", "utf8").split("\n")){
   +a[0]&&console.log(a[0]- -a[2])
 }
