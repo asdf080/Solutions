@@ -1,0 +1,1 @@
+console.log([...require("fs").readFileSync("/dev/stdin", "utf8").trim().split("\n")[1]].reduce((a,b) => a+Number(b),0))
