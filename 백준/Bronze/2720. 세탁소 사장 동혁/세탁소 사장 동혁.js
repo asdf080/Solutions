@@ -1,0 +1,2 @@
+let [a, ...input] = require("fs").readFileSync("/dev/stdin", "utf8").trim().split("\n")
+console.log(input.map((v) => `${Math.floor(v / 25)} ${Math.floor((v % 25) / 10)} ${Math.floor(((v % 25) % 10) / 5)} ${Math.floor(((v % 25) % 10) % 5)}`).join("\n"));
