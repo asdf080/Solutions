@@ -3,7 +3,7 @@ function solution(name, yearning, photo) {
     photo.map((ph) => {
       let num = 0;
       ph.map((p) => {
-        if (name.includes(p)) num += yearning[name.indexOf(p)];
+        num += yearning[name.indexOf(p)] ?? 0;
       });
       answer.push(num);
     });
