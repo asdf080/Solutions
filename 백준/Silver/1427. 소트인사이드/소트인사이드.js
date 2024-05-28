@@ -1,0 +1,1 @@
+console.log([...require("fs").readFileSync(0, "utf8").trim()].sort((a,b)=>Number(b)-a).join(""))
