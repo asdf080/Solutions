@@ -1,8 +1,7 @@
 function solution(n) {
-    var answer = 0, num = 0;
-    while(num<=n){
-        if(n%num==0) answer += num;
-        num++
+    var answer = 0;
+    for(let i=1;i<=n;i++) {
+        if(n % i === 0) answer += i
     }
     return answer;
 }
