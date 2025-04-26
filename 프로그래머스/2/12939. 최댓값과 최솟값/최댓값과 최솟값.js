@@ -1,4 +1,6 @@
 function solution(s) {
-    let a = s.split(' ').map(v => Number(v))
-    return `${Math.min(...a)} ${Math.max(...a)}`;
+    const arr = s.split(' ').map(Number)
+    let max = Math.max(...arr)
+    let min = Math.min(...arr)
+    return `${min} ${max}`;
 }
